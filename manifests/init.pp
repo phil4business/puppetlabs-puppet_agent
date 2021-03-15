@@ -114,6 +114,7 @@ class puppet_agent (
   $skip_if_unavailable     = 'absent',
   $msi_move_locked_files   = false,
   $wait_for_pxp_agent_exit = undef,
+  $wait_for_puppet_run     = undef,
 ) inherits ::puppet_agent::params {
 
   if (getvar('::aio_agent_version') == undef) {
